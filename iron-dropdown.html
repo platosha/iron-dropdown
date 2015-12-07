@@ -267,6 +267,9 @@ method is called on the element.
 
           target += this.verticalOffset;
 
+          var devicePixelRatio = window.devicePixelRatio || 1;
+          target = Math.round(target * devicePixelRatio) / devicePixelRatio;
+
           return Math.max(target, 0);
         },
 
